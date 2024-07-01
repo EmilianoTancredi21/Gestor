@@ -1,10 +1,15 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { MainLayout } from "./styles/Layout";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
+  const [active, setActive] = useState(1);
+
   return (
     <StyledApp className="App">
       <MainLayout />
+      <Navigation active={active} setActive={setActive} />
     </StyledApp>
   );
 }
